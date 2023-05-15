@@ -5,13 +5,9 @@ from PIL import Image
 import form
 
 
-class CalcFrame(form.MyFrame1): 
+class CompAppFrame(form.MyFrame1): 
     def __init__(self, parent):
         form.MyFrame1.__init__(self, parent)
-
-    def OnCompressClick1(self, event):
-        num = int(self.txtSource.GetValue()) 
-        self.txtDestination.SetValue (str(num*num)) 
 
     def OnCompressClick(self, event):
         source_path = self.txtSource.GetValue()
@@ -31,7 +27,7 @@ class CalcFrame(form.MyFrame1):
 
 
 app = wx.App(False) 
-frame = CalcFrame(None) 
+frame = CompAppFrame(None) 
 frame.Show(True)
 
 # start the applications
